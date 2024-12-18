@@ -112,9 +112,7 @@ local function YLNQ_fake_script() -- ESP.LocalScript
 			if Active == true then
 				for i,v in game:GetService("Players"):GetChildren() do
 					script.Parent.BackgroundColor3 = Color3.fromRGB(84, 0, 110)
-					if v.Name ~= game.Players.LocalPlayer.Name then
-						v.Character:FindFirstChildOfClass("Highlight"):Destroy()
-					end
+					v.Character:FindFirstChildOfClass("Highlight"):Destroy()
 					Active = false
 					
 					
@@ -140,6 +138,3 @@ local function YLNQ_fake_script() -- ESP.LocalScript
 		end
 	end)
 	
-	game.StarterGui:FindFirstChild("ESPFr")
-end
-coroutine.wrap(YLNQ_fake_script)()
