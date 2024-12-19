@@ -113,7 +113,7 @@ local function FIVTA_fake_script() -- ESP.LocalScript
 			if Active == true then
 				for i,v in pairs(game:GetService("Players"):GetChildren()) do
 					script.Parent.BackgroundColor3 = Color3.fromRGB(84, 0, 110)
-					if v.Name ~= game.Players.LocalPlayer then
+					if v.Name ~= game.Players.LocalPlayer.Name then
 						v.Character:FindFirstChildOfClass("Highlight"):Destroy()
 					end
 					Active = false
