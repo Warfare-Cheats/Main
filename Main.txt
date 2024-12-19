@@ -3,7 +3,7 @@
 
 -- Instances:
 
-local ScreenGui = Instance.new("ScreenGui")
+local ScreenGui1 = Instance.new("ScreenGui")
 local Frame = Instance.new("Frame")
 local TextLabel = Instance.new("TextLabel")
 local ScrollingFrame = Instance.new("ScrollingFrame")
@@ -12,10 +12,12 @@ local ESP = Instance.new("TextButton")
 
 --Properties:
 
-ScreenGui.Parent = game.Players.LocalPlayer:WaitForChild("PlayerGui")
-ScreenGui.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
+ScreenGui1.Name = "ScreenGui1"
+ScreenGui1.Parent = game.Players.LocalPlayer:WaitForChild("PlayerGui")
+ScreenGui1.Enabled = false
+ScreenGui1.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
 
-Frame.Parent = ScreenGui
+Frame.Parent = ScreenGui1
 Frame.BackgroundColor3 = Color3.fromRGB(145, 137, 135)
 Frame.BorderColor3 = Color3.fromRGB(0, 0, 0)
 Frame.BorderSizePixel = 0
@@ -65,7 +67,7 @@ ESP.TextSize = 14.000
 
 -- Scripts:
 
-local function JGOHI_fake_script() -- InfJump.LocalScript 
+local function HMWHE_fake_script() -- InfJump.LocalScript 
 	local script = Instance.new('LocalScript', InfJump)
 
 	local Active = false
@@ -85,8 +87,8 @@ local function JGOHI_fake_script() -- InfJump.LocalScript
 		end	
 	end)
 end
-coroutine.wrap(JGOHI_fake_script)()
-local function LOLZW_fake_script() -- ESP.LocalScript 
+coroutine.wrap(HMWHE_fake_script)()
+local function FIVTA_fake_script() -- ESP.LocalScript 
 	local script = Instance.new('LocalScript', ESP)
 
 	local Active = false
@@ -103,7 +105,7 @@ local function LOLZW_fake_script() -- ESP.LocalScript
 						Light.Parent = char
 					else
 					end
-					
+	
 				end
 			end
 			Active = true
@@ -111,10 +113,12 @@ local function LOLZW_fake_script() -- ESP.LocalScript
 			if Active == true then
 				for i,v in game:GetService("Players"):GetChildren() do
 					script.Parent.BackgroundColor3 = Color3.fromRGB(84, 0, 110)
-					v.Character:FindFirstChildOfClass("Highlight"):Destroy()
+					if v.Name ~= game.Players.LocalPlayer then
+						v.Character:FindFirstChildOfClass("Highlight"):Destroy()
+					end
 					Active = false
-					
-					
+	
+	
 				end
 			end
 		end
@@ -137,4 +141,5 @@ local function LOLZW_fake_script() -- ESP.LocalScript
 		end
 	end)
 end
-coroutine.wrap(LOLZW_fake_script)()
+coroutine.wrap(FIVTA_fake_script)()
+
