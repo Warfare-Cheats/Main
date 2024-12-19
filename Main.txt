@@ -3,7 +3,7 @@
 
 -- Instances:
 
-local ScreenGui1 = Instance.new("ScreenGui")
+local ScreenGui = Instance.new("ScreenGui")
 local Frame = Instance.new("Frame")
 local TextLabel = Instance.new("TextLabel")
 local ScrollingFrame = Instance.new("ScrollingFrame")
@@ -12,15 +12,14 @@ local ESP = Instance.new("TextButton")
 
 --Properties:
 
-ScreenGui1.Name = "ScreenGui1"
-ScreenGui1.Parent = game.Players.LocalPlayer:WaitForChild("PlayerGui")
-ScreenGui1.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
+ScreenGui.Parent = game.Players.LocalPlayer:WaitForChild("PlayerGui")
+ScreenGui.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
 
-Frame.Parent = ScreenGui1
+Frame.Parent = ScreenGui
 Frame.BackgroundColor3 = Color3.fromRGB(145, 137, 135)
 Frame.BorderColor3 = Color3.fromRGB(0, 0, 0)
 Frame.BorderSizePixel = 0
-Frame.Position = UDim2.new(0.963831842, 0, 0.828089058, 0)
+Frame.Position = UDim2.new(0.928084254, 0, 0.824228048, 0)
 Frame.Size = UDim2.new(0, 116, 0, 222)
 
 TextLabel.Parent = Frame
@@ -66,10 +65,10 @@ ESP.TextSize = 14.000
 
 -- Scripts:
 
-local function TTXLT_fake_script() -- InfJump.LocalScript 
+local function JGOHI_fake_script() -- InfJump.LocalScript 
 	local script = Instance.new('LocalScript', InfJump)
 
-	Active = false
+	local Active = false
 	character = game.Players.LocalPlayer.Character
 	script.Parent.MouseButton1Click:Connect(function()
 		if Active == false then	
@@ -86,11 +85,11 @@ local function TTXLT_fake_script() -- InfJump.LocalScript
 		end	
 	end)
 end
-coroutine.wrap(TTXLT_fake_script)()
-local function YLNQ_fake_script() -- ESP.LocalScript 
+coroutine.wrap(JGOHI_fake_script)()
+local function LOLZW_fake_script() -- ESP.LocalScript 
 	local script = Instance.new('LocalScript', ESP)
 
-	Active = false
+	local Active = false
 	
 	script.Parent.MouseButton1Click:Connect(function()
 		if Active == false then
@@ -137,4 +136,5 @@ local function YLNQ_fake_script() -- ESP.LocalScript
 		else
 		end
 	end)
-	
+end
+coroutine.wrap(LOLZW_fake_script)()
